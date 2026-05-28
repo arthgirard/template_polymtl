@@ -186,7 +186,7 @@
         \ifx\@subtitle\empty\else{\normalsize\@subtitle\\}\fi\vfill
         \ifx\@professor\empty\else{\normalsize Travail présenté à\\\@professor\\}\fi\vfill
         {\normalsize\ifx\@sigle\empty\else\@sigle{} : \@coursetitle\\\fi\@department\\}\vfill
-        \renewcommand{\tabularxcolumn}[1]{>{\centering\arraybackslash}b{#1}}%
+        \renewcommand{\tabularxcolumn}[1]{>{\centering\arraybackslash}b{##1}}%
         \begin{tabularx}{\textwidth}{|X X|}
             \hline
             \rowcolor{black}
