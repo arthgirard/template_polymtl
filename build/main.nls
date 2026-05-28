@@ -1,0 +1,9 @@
+
+\begin{thenomenclature} 
+\nomgroup{A}
+  \item [{$\eta$}]\begingroup Rendement mécanique \nomunit{—}\nomeqref {0}\nompageref{i}
+  \item [{$\omega$}]\begingroup Vitesse angulaire \nomunit{rad/s}\nomeqref {0}\nompageref{i}
+  \item [{$\tau$}]\begingroup Couple de torsion \nomunit{N·m}\nomeqref {0}\nompageref{i}
+  \item [{$F$}]\begingroup Force appliquée \nomunit{N}\nomeqref {0}\nompageref{i}
+
+\end{thenomenclature}

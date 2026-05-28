@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  27 MAY 2026 20:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  27 MAY 2026 21:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**main.tex
-(./main.tex
+**template.tex
+(./template.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (./poly.cls
@@ -1236,9 +1236,9 @@ Package tocbasic Info: setting babel extension for `nls' on input line 188.
 \nomitemsep=\skip114
 )
 \@nomenclaturefile=\write5
-\openout5 = `main.nlo'.
+\openout5 = `template.nlo'.
 
-Package nomencl Info: Writing nomenclature file main.nlo on input line 104.
+Package nomencl Info: Writing nomenclature file template.nlo on input line 104.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
  (/usr/local/texlive/2025/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
@@ -1341,64 +1341,95 @@ LaTeX Info: Redefining \labelcpageref on input line 2370.
 Package cleveref Info: always capitalise cross-reference names on input line 7830.
 Package cleveref Info: no abbreviation of names on input line 7852.
 Package cleveref Info: always capitalise cross-reference names on input line 7852.
-)
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count553
+\lst@gtempboxa=\box133
+\lst@token=\toks62
+\lst@length=\count554
+\lst@currlwidth=\dimen419
+\lst@column=\count555
+\lst@pos=\count556
+\lst@lostspace=\dimen420
+\lst@width=\dimen421
+\lst@newlines=\count557
+\lst@lineno=\count558
+\lst@maxwidth=\dimen422
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstpatch.sty
+File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
+\c@lstnumber=\count559
+\lst@skipnumbers=\count560
+\lst@framebox=\box134
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2024/09/23 1.10c listings configuration
+))
+Package: listings 2024/09/23 1.10c (Carsten Heinz)
+
 ! Illegal parameter number in definition of \maketitle.
 <to be read again> 
                    1
-l.185 }
+l.209 }
        
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
 are all screwed up? I'm going to assume that you meant ##.
 
 )
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 16.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 33.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 11.39996pt on input line 16.
- (build/main.aux)
-\openout1 = `main.aux'.
+(Font)              scaled to size 11.39996pt on input line 33.
+ (build/template.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Warning: Label `lst:signal' multiply defined.
+
+
+LaTeX Warning: Label `lst:signal@cref' multiply defined.
+
+)
+\openout1 = `template.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
 )
 Package microtype Info: Patching varwidth to enable character protrusion.
-\MT@vwid@leftmargin=\dimen419
-\MT@vwid@rightmargin=\dimen420
-LaTeX Info: Redefining \microtypecontext on input line 16.
-Package microtype Info: Applying patch `item' on input line 16.
-Package microtype Info: Applying patch `toc' on input line 16.
-Package microtype Info: Applying patch `eqnum' on input line 16.
-Package microtype Info: Applying patch `footnote' on input line 16.
-Package microtype Info: Applying patch `verbatim' on input line 16.
-LaTeX Info: Redefining \microtypesetup on input line 16.
+\MT@vwid@leftmargin=\dimen423
+\MT@vwid@rightmargin=\dimen424
+LaTeX Info: Redefining \microtypecontext on input line 33.
+Package microtype Info: Applying patch `item' on input line 33.
+Package microtype Info: Applying patch `toc' on input line 33.
+Package microtype Info: Applying patch `eqnum' on input line 33.
+Package microtype Info: Applying patch `footnote' on input line 33.
+Package microtype Info: Applying patch `verbatim' on input line 33.
+LaTeX Info: Redefining \microtypesetup on input line 33.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 16.
+LaTeX Info: Redefining \showhyphens on input line 33.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1443,17 +1474,17 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count553
-\scratchdimen=\dimen421
-\scratchbox=\box133
-\nofMPsegments=\count554
-\nofMParguments=\count555
-\everyMPshowfont=\toks62
-\MPscratchCnt=\count556
-\MPscratchDim=\dimen422
-\MPnumerator=\count557
-\makeMPintoPDFobject=\count558
-\everyMPtoPDFconversion=\toks63
+\scratchcounter=\count561
+\scratchdimen=\dimen425
+\scratchbox=\box135
+\nofMPsegments=\count562
+\nofMParguments=\count563
+\everyMPshowfont=\toks63
+\MPscratchCnt=\count564
+\MPscratchDim=\dimen426
+\MPnumerator=\count565
+\makeMPintoPDFobject=\count566
+\everyMPtoPDFconversion=\toks64
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -1462,34 +1493,35 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) (/usr/local/texlive/2025/texmf-dist/tex/latex/translations/translations-basic-dictionary-french.trsl
 File: translations-basic-dictionary-french.trsl (french translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `french'. on input line 16.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `french'. on input line 33.
 
-Package chemgreek Info: Activating mapping `default' on line 16.
+Package chemgreek Info: Activating mapping `default' on line 33.
 
-\c__nicematrix_shift_Ldots_last_row_dim=\dimen423
-\c__nicematrix_shift_exterior_Vdots_dim=\dimen424
-\c__nicematrix_innersep_middle_dim=\dimen425
-\c@tabularnotesi=\count559
-\enitdp@tabularnotes=\count560
-\c@tabularnotes*i=\count561
-\enitdp@tabularnotes*=\count562
-LaTeX Info: Redefining \degres on input line 16.
+\c__nicematrix_shift_Ldots_last_row_dim=\dimen427
+\c__nicematrix_shift_exterior_Vdots_dim=\dimen428
+\c__nicematrix_innersep_middle_dim=\dimen429
+\c@tabularnotesi=\count567
+\enitdp@tabularnotes=\count568
+\c@tabularnotes*i=\count569
+\enitdp@tabularnotes*=\count570
+LaTeX Info: Redefining \degres on input line 33.
 Package french.ldf Info: Setting StandardItemizeEnv=true for
 (french.ldf)             compatibility with enumitem package,
-(french.ldf)             reported on input line 16.
+(french.ldf)             reported on input line 33.
 Package french.ldf Info: Setting StandardEnumerateEnv=true for
 (french.ldf)             compatibility with enumitem package,
-(french.ldf)             reported on input line 16.
-LaTeX Info: Redefining \up on input line 16.
+(french.ldf)             reported on input line 33.
+LaTeX Info: Redefining \up on input line 33.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
 
-Package todonotes Warning: The length marginparwidth is less than 2cm and will most likely cause issues with the appearance of inserted todonotes. The issue can be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to loading the todonotes package. on input line 16.
+Package todonotes Warning: The length marginparwidth is less than 2cm and will most likely cause issues with the appearance of inserted todonotes. The issue can be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to loading the todonotes package. on input line 33.
 
 Package biblatex Info: Trying to load language 'french'...
 Package biblatex Info: ... file 'french.lbx' found.
@@ -1499,126 +1531,343 @@ File: french.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `main.bcf'.
+\openout4 = `template.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'main.bbl' found.
- (build/main.bbl)
-Package biblatex Info: Reference section=0 on input line 16.
-Package biblatex Info: Reference segment=0 on input line 16.
-Package hyperref Info: Link coloring OFF on input line 16.
- (build/main.out) (build/main.out)
+Package biblatex Info: ... file 'template.bbl' found.
+ (build/template.bbl)
+Package biblatex Info: Reference section=0 on input line 33.
+Package biblatex Info: Reference segment=0 on input line 33.
+Package hyperref Info: Link coloring OFF on input line 33.
+ (build/template.out) (build/template.out)
 \@outlinefile=\write6
-\openout6 = `main.out'.
+\openout6 = `template.out'.
 
-<figures/poly-logo.png, id=31, 401.5pt x 145.54375pt>
+\c@lstlisting=\count571
+Package tocbasic Info: setting babel extension for `lol' on input line 33.
+<figures/poly-logo.png, id=139, 401.5pt x 145.54375pt>
 File: figures/poly-logo.png Graphic file (type png)
 <use figures/poly-logo.png>
-Package pdftex.def Info: figures/poly-logo.png  used on input line 17.
+Package pdftex.def Info: figures/poly-logo.png  used on input line 34.
 (pdftex.def)             Requested size: 206.69334pt x 74.9281pt.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 13.67995pt on input line 17.
+(Font)              scaled to size 13.67995pt on input line 34.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 13.67995pt on input line 17.
+(Font)              scaled to size 13.67995pt on input line 34.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-cmr.cfg) (/usr/local/texlive/2025/texmf-dist/tex/latex/wasysym/uwasy.fd) (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd) (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg) (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd) (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg)
 
 [1
 
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc} <./figures/poly-logo.png (PNG copy)>]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 16.14995pt on input line 19.
- (build/main.toc
+(Font)              scaled to size 16.14995pt on input line 36.
+ (build/template.toc
 Package cleveref Info: loaded `french' language definitions on input line 1.
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 6.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/inconsolata/t1zi4.fd
+File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
+)
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 12.0pt on input line 6.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `zi4' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `T1/zi4/b/n' will be
+(Font)              scaled to size 12.0pt on input line 13.
 )
 \tf@toc=\write7
-\openout7 = `main.toc'.
+\openout7 = `template.toc'.
 
- (build/main.lof
+ (build/template.nls
+
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 9.49997pt on input line 2.
+[1{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}]
+! Undefined control sequence.
+l.4 ...}]\begingroup Rendement mécanique \nomunit
+                                                  {—}\nomeqref {0}\nompage...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.5 ...ga$}]\begingroup Vitesse angulaire \nomunit
+                                                  {\si{\radian\per\second}}\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmss' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+! Undefined control sequence.
+l.6 ...\rho$}]\begingroup Masse volumique \nomunit
+                                                  {\si{\kilogram\per\cubic\m...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.7 ...au$}]\begingroup Couple de torsion \nomunit
+                                                  {\si{\newton\metre}}\nomeq...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.8 ...[{$E$}]\begingroup Module de Young \nomunit
+                                                  {\si{\giga\pascal}}\nomeqr...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.9 ...{$F$}]\begingroup Force appliquée \nomunit
+                                                  {\si{\newton}}\nomeqref {0...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.10 ...ingroup Moment d'inertie massique \nomunit
+                                                  {\si{\kilogram\metre\squar...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+) (build/template.lof
 Package cleveref Info: loaded `french' language definitions on input line 1.
 )
 \tf@lof=\write8
-\openout8 = `main.lof'.
+\openout8 = `template.lof'.
 
- (build/main.lot
+ (build/template.lot
 Package cleveref Info: loaded `french' language definitions on input line 1.
 )
 \tf@lot=\write9
-\openout9 = `main.lot'.
+\openout9 = `template.lot'.
 
 
 
+[2]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 28.
-[1]
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 43.
+(Font)              scaled to size 12.34996pt on input line 60.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 64.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ts1phv.fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+)
+LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
+(Font)              scaled to size 11.39996pt on input line 64.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `phv' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 13.0pt on input line 76.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 12.34996pt on input line 45.
-<Polytechnique_signature-RGB-gauche_FR.png, id=55, 183.3249pt x 75.1608pt>
-File: Polytechnique_signature-RGB-gauche_FR.png Graphic file (type png)
-<use Polytechnique_signature-RGB-gauche_FR.png>
-Package pdftex.def Info: Polytechnique_signature-RGB-gauche_FR.png  used on input line 51.
-(pdftex.def)             Requested size: 187.89914pt x 77.0403pt.
-LaTeX Font Info:    Font shape `T1/phv/m/sc' will be
-(Font)              scaled to size 11.39996pt on input line 52.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 65.
-LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 11.39996pt on input line 65.
+(Font)              scaled to size 7.59998pt on input line 93.
 
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.84 \section{Conclusion}
-                          [1 <./Polytechnique_signature-RGB-gauche_FR.png>]
+l.106 \end{equation}
+                     [1]
+\g__nicematrix_max_cell_width_dim=\dimen430
+\c@iRow=\count572
+\c@jCol=\count573
+\l__nicematrix_cell_box=\box136
+\l__nicematrix_the_array_box=\box137
+\l__nicematrix_left_delim_dim=\dimen431
+\l__nicematrix_right_delim_dim=\dimen432
+\g__nicematrix_ddots_int=\count574
+\g__nicematrix_iddots_int=\count575
+\g__nicematrix_delta_x_one_dim=\dimen433
+\g__nicematrix_delta_y_one_dim=\dimen434
+\g__nicematrix_delta_x_two_dim=\dimen435
+\g__nicematrix_delta_y_two_dim=\dimen436
+\l__nicematrix_initial_i_int=\count576
+\l__nicematrix_initial_j_int=\count577
+\l__nicematrix_final_i_int=\count578
+\l__nicematrix_final_j_int=\count579
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 17.0pt on input line 143.
+
 
 [2]
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 90.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/inconsolata/t1zi4.fd
-File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
-)
-LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 12.0pt on input line 90.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `zi4' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `T1/phv/m/sc' will be
+(Font)              scaled to size 11.39996pt on input line 166.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 5.69998pt on input line 196.
+File: figures/poly-logo.png Graphic file (type png)
+<use figures/poly-logo.png>
+Package pdftex.def Info: figures/poly-logo.png  used on input line 208.
+(pdftex.def)             Requested size: 211.38832pt x 76.62924pt.
+File: figures/poly-logo.png Graphic file (type png)
+<use figures/poly-logo.png>
+Package pdftex.def Info: figures/poly-logo.png  used on input line 223.
+(pdftex.def)             Requested size: 211.38832pt x 76.62924pt.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 10.40245pt on input line 224.
+File: figures/poly-logo.png Graphic file (type png)
+<use figures/poly-logo.png>
+Package pdftex.def Info: figures/poly-logo.png  used on input line 231.
+(pdftex.def)             Requested size: 211.38832pt x 76.62924pt.
 
-Overfull \hbox (0.1713pt too wide) in paragraph at lines 91--91
+Overfull \hbox (7.0129pt too wide) in paragraph at lines 231--232
+ [][] 
+ []
+
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 10.95pt on input line 232.
+
+! Package tikz Error: You need to say \usetikzlibrary{patterns}.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247         \fill[pattern=north east lines]
+                                              (-0.2,-0.6) rectangle (0,1.1);
+This error message was generated by an \errmessage
+command, so I can't give any explicit help.
+Pretend that you're Hercule Poirot: Examine all clues,
+and deduce the truth by order and method.
+
+
+
+[3]
+Package pgfplots info on input line 300: Using 'lua backend=false' for axis: xmode=log unsupported (yet).
+
+
+[4]
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 387.
+
+
+[5]
+Overfull \hbox (5.87494pt too wide) detected at line 418
+$[]$
+ []
+
+
+Overfull \hbox (5.87494pt too wide) detected at line 419
+$[]$
+ []
+
+
+Overfull \hbox (5.87494pt too wide) detected at line 420
+$[]$
+ []
+
+
+Overfull \hbox (5.87494pt too wide) detected at line 421
+$[]$
+ []
+
+
+Overfull \hbox (5.87494pt too wide) detected at line 422
+$[]$
+ []
+
+
+
+[6
+
+]
+
+[7
+
+]
+Overfull \hbox (0.1713pt too wide) in paragraph at lines 479--479
 \T1/zi4/m/n/12 literature / article / make -[] it -[] easy -[] on -[] the -[] user -[] designing -[] for -[] discoverability -[]
  []
 
 
 
-[3{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}]
+[8] (/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2024/09/23 1.10c listings language file
+)
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 6.0pt on input line 510.
+LaTeX Font Info:    Font shape `T1/zi4/b/n' will be
+(Font)              scaled to size 10.95pt on input line 510.
+LaTeX Font Info:    Trying to load font information for TS1+zi4 on input line 519.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/inconsolata/ts1zi4.fd
+File: ts1zi4.fd 2018/01/14 TS1/zi4 (Inconsolata)
+)
+LaTeX Font Info:    Font shape `TS1/zi4/m/n' will be
+(Font)              scaled to size 10.95pt on input line 519.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `zi4' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 
-[4] (build/main.aux
+
+LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
+(Font)              using `T1/zi4/m/n' instead on input line 525.
+
+LaTeX Font Info:    Font shape `T1/zi4/m/it' will be
+(Font)              scaled to size 10.95pt on input line 525.
+
+LaTeX Font Warning: Font shape `TS1/zi4/m/it' undefined
+(Font)              using `TS1/zi4/m/n' instead
+(Font)              for symbol `textquotesingle' on input line 525.
+
+
+
+[9{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/inconsolata/i4-ts1.enc}] (build/template.aux
 Package cleveref Info: loaded `french' language definitions on input line 14.
 )
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E2E470CE7BD5EB45C5E4A3CEBB5B3A59;600.
-Package logreq Info: Writing requests to 'main.run.xml'.
-\openout1 = `main.run.xml'.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `template.out' has not changed.
+(rerunfilecheck)             Checksum: C49164259A75EFD029D055A58CE76A48;6046.
+Package logreq Info: Writing requests to 'template.run.xml'.
+\openout1 = `template.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 58859 strings out of 473190
- 1354580 string characters out of 5715801
- 2312989 words of memory out of 5000000
- 81146 multiletter control sequences out of 15000+600000
- 598696 words of font info for 141 fonts, out of 8000000 for 9000
+ 61882 strings out of 473190
+ 1406155 string characters out of 5715801
+ 2501236 words of memory out of 5000000
+ 83998 multiletter control sequences out of 15000+600000
+ 612180 words of font info for 200 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 125i,12n,131p,1197b,2135s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on build/main.pdf (6 pages, 112592 bytes).
+ 125i,19n,131p,1201b,2248s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{lstlisting.2} has been referenced but does not exist, replaced by a fixed one
+
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4b.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on build/template.pdf (12 pages, 275642 bytes).
 PDF statistics:
- 124 PDF objects out of 1000 (max. 8388607)
- 98 compressed objects within 1 object stream
- 17 named destinations out of 1000 (max. 500000)
- 47687 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 464 PDF objects out of 1000 (max. 8388607)
+ 400 compressed objects within 4 object streams
+ 103 named destinations out of 1000 (max. 500000)
+ 67354 words of extra memory for PDF output out of 74296 (max. 10000000)
 

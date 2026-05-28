@@ -1,0 +1,12 @@
+
+\begin{thenomenclature} 
+\nomgroup{A}
+  \item [{$\eta$}]\begingroup Rendement mécanique \nomunit{—}\nomeqref {0}\nompageref{1}
+  \item [{$\omega$}]\begingroup Vitesse angulaire \nomunit{\si{\radian\per\second}}\nomeqref {0}\nompageref{1}
+  \item [{$\rho$}]\begingroup Masse volumique \nomunit{\si{\kilogram\per\cubic\metre}}\nomeqref {0}\nompageref{1}
+  \item [{$\tau$}]\begingroup Couple de torsion \nomunit{\si{\newton\metre}}\nomeqref {0}\nompageref{1}
+  \item [{$E$}]\begingroup Module de Young \nomunit{\si{\giga\pascal}}\nomeqref {0}\nompageref{1}
+  \item [{$F$}]\begingroup Force appliquée \nomunit{\si{\newton}}\nomeqref {0}\nompageref{1}
+  \item [{$J$}]\begingroup Moment d'inertie massique \nomunit{\si{\kilogram\metre\squared}}\nomeqref {0}\nompageref{1}
+
+\end{thenomenclature}

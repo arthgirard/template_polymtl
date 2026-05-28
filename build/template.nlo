@@ -1,0 +1,7 @@
+\nomenclatureentry{a$F$@[{$F$}]\begingroup Force appliquée \nomunit{\si{\newton}}\nomeqref {0}|nompageref}{1}
+\nomenclatureentry{a$\tau$@[{$\tau$}]\begingroup Couple de torsion \nomunit{\si{\newton\metre}}\nomeqref {0}|nompageref}{1}
+\nomenclatureentry{a$\eta$@[{$\eta$}]\begingroup Rendement mécanique \nomunit{—}\nomeqref {0}|nompageref}{1}
+\nomenclatureentry{a$\omega$@[{$\omega$}]\begingroup Vitesse angulaire \nomunit{\si{\radian\per\second}}\nomeqref {0}|nompageref}{1}
+\nomenclatureentry{a$J$@[{$J$}]\begingroup Moment d'inertie massique \nomunit{\si{\kilogram\metre\squared}}\nomeqref {0}|nompageref}{1}
+\nomenclatureentry{a$E$@[{$E$}]\begingroup Module de Young \nomunit{\si{\giga\pascal}}\nomeqref {0}|nompageref}{1}
+\nomenclatureentry{a$\rho$@[{$\rho$}]\begingroup Masse volumique \nomunit{\si{\kilogram\per\cubic\metre}}\nomeqref {0}|nompageref}{1}

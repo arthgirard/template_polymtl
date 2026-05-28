@@ -94,12 +94,15 @@
     {\fontsize{12}{14.4}\selectfont\mdseries\color{sousoustitre}}
     {\thesubsubsection}{1em}{}
 
-% Bibliographie
+% Bibliographie & nomenclature
 \RequirePackage[
     backend = biber,
     style = ieee,
     sorting = none,
 ]{biblatex}
+\RequirePackage{nomencl} % OPTIONNEL
+\makenomenclature
+\renewcommand{\nomname}{Liste des abbréviations}
 
 % Références
 \RequirePackage[hidelinks]{hyperref} % doit être chargé en dernier (sauf pour cleveref)
@@ -115,6 +118,9 @@
 \Crefname{section}{Section}{Sections}
 \crefname{appendix}{annexe}{annexes}
 \Crefname{appendix}{Annexe}{Annexes}
+\crefname{lstlisting}{listing}{listings}
+\Crefname{lstlisting}{Listing}{Listings}
+
 \AtBeginDocument{
   \shorthandoff{:} % nécessaire pour faire fonctionner cleveref avec french babel
   \hypersetup{ % metadatas
@@ -124,13 +130,34 @@
   }
 }
 
+% Code
+\usepackage{listings}
+
+\lstdefinestyle{poly}{
+    basicstyle = \ttfamily\small,
+    keywordstyle = \color{titre}\bfseries,
+    commentstyle = \color{gray}\itshape,
+    stringstyle = \color{soustitre},
+    numberstyle = \ttfamily\tiny\color{gray},
+    numbers = left,
+    numbersep = 8pt,
+    frame = single,
+    rulecolor = \color{gray!40},
+    backgroundcolor = \color{gray!5},
+    breaklines = true,
+    captionpos = b,
+    showstringspaces = false,
+    tabsize = 4,
+}
+\lstset{style=poly}
+
 % Page titre
 \def\@subtitle{}
 \def\@professor{}
 \def\@sigle{}
 \def\@coursetitle{}
 \def\@department{Département de génie mécanique}
-\def\@logopath{poly-logo}
+\def\@logopath{figures/poly-logo}
 \def\@members{}
 
 \newcommand{\subtitle}[1]{\def\@subtitle{#1}}

@@ -1,0 +1,15 @@
+[0] Config.pm:308> INFO - This is Biber 2.20
+[0] Config.pm:311> INFO - Logfile is 'build/template.blg'
+[33] biber-darwin:340> INFO - === Wed May 27, 2026, 21:22:30
+[41] Biber.pm:420> INFO - Reading 'build/template.bcf'
+[73] Biber.pm:994> INFO - Found 1 citekeys in bib section 0
+[80] Biber.pm:4463> INFO - Processing section 0
+[85] Biber.pm:4654> INFO - Looking for bibtex file 'references.bib' for section 0
+[86] bibtex.pm:1713> INFO - LaTeX decoding ...
+[87] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[105] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[106] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[106] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'fr-FR'
+[106] Biber.pm:4289> INFO - No sort tailoring available for locale 'fr-FR'
+[109] bbl.pm:676> INFO - Writing 'build/template.bbl' with encoding 'UTF-8'
+[110] bbl.pm:779> INFO - Output to build/template.bbl

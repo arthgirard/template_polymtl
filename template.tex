@@ -1,0 +1,535 @@
+% ╔═════════════════════════════════════════════════════════════╗
+% ║         Gabarit — poly.cls (Polytechnique Montréal)         ║
+% ╚═════════════════════════════════════════════════════════════╝
+\documentclass{poly}
+
+% Page Titre 
+\title{Titre du rapport}
+\subtitle{Sous-titre (optionnel)} 
+\professor{Prénom Nom}
+\sigle{MEC1234}
+\coursetitle{Titre du cours}
+\department{Département de génie mécanique}
+\logopath{figures/poly-logo.png} % défaut: figures/poly-logo          
+
+\addmember{Prénom Nom}{1234567} % une ligne par membre
+\addmember{Olivier Saint-Cyr}{2345678}
+\addmember{Arthur Girard}{3456789}
+
+\date{\today}
+
+% Bibliographie
+\addbibresource{references.bib}
+
+% Nomenclature (optionnel)
+\nomenclature{$F$}{Force appliquée \nomunit{\si{\newton}}}
+\nomenclature{$\tau$}{Couple de torsion \nomunit{\si{\newton\metre}}}
+\nomenclature{$\eta$}{Rendement mécanique \nomunit{—}}
+\nomenclature{$\omega$}{Vitesse angulaire \nomunit{\si{\radian\per\second}}}
+\nomenclature{$J$}{Moment d'inertie massique \nomunit{\si{\kilogram\metre\squared}}}
+\nomenclature{$E$}{Module de Young \nomunit{\si{\giga\pascal}}}
+\nomenclature{$\rho$}{Masse volumique \nomunit{\si{\kilogram\per\cubic\metre}}}
+
+\begin{document}
+\maketitle   % génère page titre et configure fancyhdr
+\pagenumbering{roman}
+\tableofcontents
+\printnomenclature % liste des symboles/abréviations (optionnel)
+\listoffigures
+\listoftables
+
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\section{Introduction}
+
+Ce gabarit illustre l'ensemble des fonctionnalités de \texttt{poly.cls}.
+Chaque section cible un groupe de paquets précis afin de servir de
+référence lors de la rédaction de rapports à Polytechnique Montréal.
+
+Le couple transmis est donné par l'\cref{eq:couple} :
+\begin{equation}
+    \tau = F \cdot r \cdot \eta
+    \label{eq:couple}
+\end{equation}
+où les symboles sont définis dans la nomenclature.
+
+\section{Typographie et mise en forme}
+
+\subsection{Hiérarchie des titres colorés}
+
+La classe définit trois niveaux :
+\begin{itemize}[label=\textbullet, noitemsep]
+    \item \texttt{\textbackslash section} — rouge Polytechnique
+          \textcolor{titre}{\rule{0.8em}{0.8ex}}~;
+    \item \texttt{\textbackslash subsection} — rouge doux
+          \textcolor{soustitre}{\rule{0.8em}{0.8ex}}~;
+    \item \texttt{\textbackslash subsubsection} — rouge foncé
+          \textcolor{sousoustitre}{\rule{0.8em}{0.8ex}}.
+\end{itemize}
+
+\subsubsection{Troisième niveau}
+
+Ce niveau convient aux détails techniques d'une sous-section.
+
+\subsection{Listes personnalisées (\texttt{enumitem})}
+
+Énumération sans espacement inter-item (\texttt{noitemsep}) :
+\begin{enumerate}[label=\arabic*., leftmargin=*, noitemsep]
+    \item Premier élément.
+    \item Deuxième élément.
+    \item Troisième élément.
+\end{enumerate}
+
+Liste avec tirets longs et marge personnalisée :
+\begin{itemize}[label=\textemdash, leftmargin=2em, itemsep=2pt]
+    \item Propriété mécanique principale.
+    \item Propriété thermique secondaire.
+\end{itemize}
+
+\subsection{Ordinal (\texttt{nth}) et tabulation (\texttt{tabto})}
+
+Le \nth{1} essai, le \nth{2} essai et le \nth{3} essai ont été réalisés
+dans les conditions décrites à la \cref{sec:mesures}.
+
+\tabto{3cm}Texte décalé à 3 cm grâce à \texttt{\textbackslash tabto}.
+
+\section{Mathématiques}\label{sec:maths}
+
+\subsection{Équations numérotées et alignées}
+
+L'énergie cinétique d'un solide en rotation :
+\begin{equation}
+    E_c = \frac{1}{2} J \omega^2
+    \label{eq:ecinrot}
+\end{equation}
+
+Les équations du mouvement plan (référence multiple
+\texttt{cleveref} : \cref{eq:newton_x,eq:newton_y,eq:newton_M}) :
+\begin{align}
+    \sum F_x &= m a_x  \label{eq:newton_x}\\
+    \sum F_y &= m a_y  \label{eq:newton_y}\\
+    \sum M_O &= J\alpha \label{eq:newton_M}
+\end{align}
+
+\subsection{Vecteurs gras (\texttt{bm})}
+
+Le vecteur moment cinétique : $\bm{L} = J\,\bm{\omega}$, avec
+$\bm{\omega} = \omega\,\hat{\bm{k}}$.
+
+\subsection{Annulations (\texttt{cancel})}
+
+Simplification d'une masse commune :
+\[
+    \cancel{m} \cdot a = \cancel{m} \cdot g \sin\theta
+    \implies a = g\sin\theta
+\]
+Double annulation : $\dfrac{\bcancel{6}\,x}{\bcancel{6}\,y} = \dfrac{x}{y}$.
+
+\subsection{Matrices (\texttt{nicematrix})}
+
+Matrice de rotation autour de $z$ :
+\begin{equation}
+    \mathbf{R}_z(\theta) =
+    \begin{pNiceMatrix}
+        \cos\theta & -\sin\theta & 0 \\
+        \sin\theta &  \cos\theta & 0 \\
+        0          &  0          & 1
+    \end{pNiceMatrix}
+    \label{eq:rotation}
+\end{equation}
+
+\section{Unités et grandeurs (\texttt{siunitx})}\label{sec:mesures}
+
+\subsection{Grandeurs avec incertitude}
+
+La masse mesurée est $m = \SI{12,45 \pm 0,02}{\kilogram}$.
+La température ambiante était de \SI{21,3}{\degreeCelsius} et la
+pression atmosphérique de \SI{101,3}{\kilo\pascal}.
+
+\subsection{Plages et listes d'unités}
+
+La plage de fréquences testée : \SIrange{0,1}{1000}{\hertz}.
+Les modules de Young typiques pour l'aluminium : \SIrange{69}{72}{\giga\pascal}.
+Masses testées : \SIlist{0,5 ; 1,0 ; 2,0 ; 5,0}{\kilogram}.
+
+\subsection{Nombres et notation scientifique}
+
+Grand nombre groupé : \num{1234567,89}.
+Notation scientifique : \num{2,998e8}~\si{\metre\per\second}
+(vitesse de la lumière).
+
+\subsection{Tableau avec colonne \texttt{S} de \texttt{siunitx}}
+
+\begin{table}[!ht]
+    \caption{Résultats des essais de traction sur acier 1020}
+    \label{tab:mesures}
+    \begin{center}
+        \begin{tabular}{c
+                        S[table-format=3.1]
+                        S[table-format=1.3]
+                        S[table-format=3.1]}
+            \toprule
+            Essai &
+            {$F$ (\si{\kilo\newton})} &
+            {$\delta$ (\si{\milli\metre})} &
+            {$\sigma$ (\si{\mega\pascal})} \\
+            \midrule
+            1 & 45,2 & 1,234 & 180,8 \\
+            2 & 87,6 & 2,451 & 350,4 \\
+            3 & 130,1 & 3,700 & 520,4 \\
+            4 & 173,5 & 4,921 & 694,0 \\
+            5 & 216,8 & 6,150 & 867,2 \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\section{Chimie (\texttt{mhchem})}
+
+La combustion complète du méthane :
+\begin{equation}
+    \ce{CH4 + 2 O2 -> CO2 + 2 H2O}
+    \label{eq:combustion}
+\end{equation}
+L'oxyde d'aluminium (corrosion) est le \ce{Al2O3}.
+L'acier inoxydable 316L contient du \ce{Cr}, du \ce{Ni} et du \ce{Mo}.
+Réaction d'équilibre : \ce{H2O <=> H+ + OH-}.
+
+\section{Figures et sous-figures}
+
+\subsection{Figure simple}
+
+La \cref{fig:logo} présente le logo de Polytechnique Montréal.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.45\textwidth]{figures/poly-logo.png}
+    \caption{Logo de Polytechnique Montréal}
+    \label{fig:logo}
+\end{figure}
+
+\subsection{Sous-figures (\texttt{subcaption})}
+
+La \cref{fig:comparaison} compare deux mises en forme du même logo.
+La \cref{fig:logo_orig} est la version originale et la
+\cref{fig:logo_adj} illustre \texttt{adjustbox}.
+
+\begin{figure}[!ht]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/poly-logo.png}
+        \caption{Version originale}
+        \label{fig:logo_orig}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \adjustbox{width=\textwidth, cfbox=titre 1.5pt 2pt}{%
+            \includegraphics[width=\textwidth]{figures/poly-logo.png}}
+        \caption{Encadrement via \texttt{adjustbox}}
+        \label{fig:logo_adj}
+    \end{subfigure}
+    \caption{Comparaison de mises en forme avec \texttt{subcaption} et \texttt{adjustbox}}
+    \label{fig:comparaison}
+\end{figure}
+
+\subsection{Diagramme TikZ}
+
+La \cref{fig:tikz} représente un système masse-ressort-amortisseur.
+
+\begin{figure}[!ht]
+    \centering
+    \begin{tikzpicture}[font=\small, scale=1.05]
+        % Mur gauche
+        \fill[pattern=north east lines] (-0.2,-0.6) rectangle (0,1.1);
+        \draw[thick] (0,-0.6) -- (0,1.1);
+        % Ressort (voie haute)
+        \draw[thick,
+              decoration={coil, segment length=5pt, amplitude=4pt},
+              decorate]
+            (0,0.65) -- (2.6,0.65);
+        \node[above] at (1.3,0.88) {$k$};
+        % Amortisseur (voie basse)
+        \draw[thick] (0,0.1) -- (0.9,0.1);
+        \draw[thick] (0.9,-0.15) rectangle (1.9,0.35);
+        \draw[thick] (1.4,-0.15) -- (1.4,0.35);  % piston
+        \draw[thick] (1.9,0.1) -- (2.6,0.1);
+        \node[above] at (1.4,0.38) {$c$};
+        % Masse
+        \draw[thick, fill=gray!25] (2.6,-0.2) rectangle (3.7,0.9);
+        \node at (3.15,0.35) {$m$};
+        % Force extérieure
+        \draw[->, thick, color=titre, line width=1.2pt]
+            (3.7,0.35) -- (4.7,0.35)
+            node[right] {$F(t)$};
+        % Déplacement
+        \draw[<->, gray] (2.6,-0.45) -- (3.7,-0.45)
+            node[midway, below] {$x(t)$};
+        % Sol
+        \draw[thick] (-0.2,-0.6) -- (4.9,-0.6);
+    \end{tikzpicture}
+    \caption{Système masse-ressort-amortisseur à un degré de liberté}
+    \label{fig:tikz}
+\end{figure}
+
+\subsection{Graphique pgfplots}
+
+La \cref{fig:pgf} présente la réponse fréquentielle d'un système du
+\nth{2} ordre pour deux coefficients d'amortissement.
+
+\begin{figure}[!ht]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            width  = 0.82\textwidth,
+            height = 5.5cm,
+            xlabel = {Fréquence réduite $\Omega = \omega/\omega_n$},
+            ylabel = {Amplitude (\si{\decibel})},
+            xmode  = log,
+            grid   = major,
+            grid style = {dotted, gray!40},
+            xmin=0.05, xmax=20,
+            xtick = {0.1, 1, 10},
+            xticklabels = {$0{,}1$, $1$, $10$},
+            legend pos  = south west,
+            legend style = {font=\small},
+            title  = {Fonction de transfert $H(\Omega)$},
+        ]
+            \addplot[thick, color=titre, domain=0.05:20, samples=300]
+                { 20*ln(1/sqrt((1-x^2)^2+(2*0.1*x)^2))/ln(10) };
+            \addlegendentry{$\zeta = 0{,}10$}
+            \addplot[thick, dashed, color=soustitre, domain=0.05:20, samples=300]
+                { 20*ln(1/sqrt((1-x^2)^2+(2*0.5*x)^2))/ln(10) };
+            \addlegendentry{$\zeta = 0{,}50$}
+            \addplot[thick, dotted, color=sousoustitre, domain=0.05:20, samples=300]
+                { 20*ln(1/sqrt((1-x^2)^2+(2*1.0*x)^2))/ln(10) };
+            \addlegendentry{$\zeta = 1{,}00$}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Réponse fréquentielle pour trois coefficients d'amortissement}
+    \label{fig:pgf}
+\end{figure}
+
+\section{Tableaux avancés}
+
+\subsection{Tableau coloré (\texttt{xcolor})}
+
+Le \cref{tab:materiaux} utilise \texttt{\textbackslash rowcolor} pour
+alterner les rangées, à l'image de la page titre de la classe.
+
+\begin{table}[!ht]
+    \caption{Propriétés mécaniques de matériaux courants}
+    \label{tab:materiaux}
+    \begin{center}
+        \begin{tabular}{l
+                        S[table-format=3.0]
+                        S[table-format=4.0]
+                        S[table-format=4.0]}
+            \rowcolor{black}
+            \textcolor{white}{\textbf{Matériau}} &
+            \textcolor{white}{\textbf{$E$ (\si{\giga\pascal})}} &
+            \textcolor{white}{\textbf{$\sigma_y$ (\si{\mega\pascal})}} &
+            \textcolor{white}{\textbf{$\rho$ (\si{\kilogram\per\cubic\metre})}} \\
+            \rowcolor{gray!15} Acier 1020       & 200 &  210 & 7850 \\
+                               Aluminium 6061   &  69 &  276 & 2700 \\
+            \rowcolor{gray!15} Titane Ti-6Al-4V & 114 &  880 & 4430 \\
+                               Nylon PA66       &   3 &   80 & 1140 \\
+            \rowcolor{gray!15} Béton (comp.)    &  30 & 1000 & 2300 \\
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\subsection{Tableau à largeur fixe (\texttt{tabularx})}
+
+\begin{table}[!ht]
+    \caption{Étapes du protocole expérimental}
+    \label{tab:proto}
+    \begin{center}
+        \begin{tabularx}{0.92\textwidth}{c l X}
+            \toprule
+            \textbf{\#} & \textbf{Étape} & \textbf{Description détaillée} \\
+            \midrule
+            1 & Étalonnage &
+                Vérifier l'étalonnage de la cellule de charge avec des
+                masses certifiées avant chaque séance. \\
+            2 & Montage &
+                Assembler le dispositif selon le schéma fourni, en
+                s'assurant de l'alignement de l'arbre moteur. \\
+            3 & Acquisition &
+                Lancer LabVIEW et paramétrer la fréquence d'échantillonnage
+                à \SI{1000}{\hertz}. Enregistrer pendant \SI{30}{\second}. \\
+            4 & Analyse &
+                Importer les données en Python et appliquer un filtre
+                passe-bas de Butterworth d'ordre 4 (\SI{50}{\hertz}). \\
+            \bottomrule
+        \end{tabularx}
+    \end{center}
+\end{table}
+
+\section{Mise en page avancée}
+
+\subsection{Colonnes multiples (\texttt{multicol})}
+
+\begin{multicols}{2}
+La classe charge \texttt{multicol}, permettant de disposer du texte sur
+plusieurs colonnes. Utile pour les résumés ou les sections comparatives.
+
+Chaque colonne hérite de l'espacement et de la police définis par la
+classe ; les sauts de colonne sont gérés automatiquement par \LaTeX.
+\end{multicols}
+
+\subsection{Notes de travail (\texttt{todonotes})}
+
+\todo[inline]{Remplacer par les résultats définitifs une fois les
+mesures complétées.}
+
+Le paquet \texttt{todonotes} permet des annotations visibles.
+\todo{Note marginale}
+
+\subsection{Page en mode paysage (\texttt{pdflscape})}
+
+La page suivante montre comment intégrer un grand tableau avec
+\texttt{pdflscape}.
+
+\begin{landscape}
+    \begin{table}[!ht]
+        \caption{Données d'essai complètes — tableau étendu en mode paysage}
+        \label{tab:landscape}
+        \begin{center}
+            \begin{tabular}{c
+                            S[table-format=2.2]
+                            S[table-format=1.3]
+                            S[table-format=3.1]
+                            S[table-format=3.1]
+                            S[table-format=3.1]
+                            S[table-format=2.1]}
+                \toprule
+                Éprouvette &
+                {$d_0$ (\si{\milli\metre})} &
+                {$A_0$ (\si{\milli\metre\squared})} &
+                {$F_e$ (\si{\kilo\newton})} &
+                {$F_r$ (\si{\kilo\newton})} &
+                {$\sigma_e$ (\si{\mega\pascal})} &
+                {$\varepsilon_r$ (\%)} \\
+                \midrule
+                E-01 & 6,35 & 31,67 & 100,3 & 142,8 & 281,8 & 18,4 \\
+                E-02 & 6,35 & 31,67 &  99,7 & 141,5 & 280,2 & 19,1 \\
+                E-03 & 6,35 & 31,67 & 100,7 & 143,5 & 282,8 & 17,8 \\
+                E-04 & 6,35 & 31,67 & 100,1 & 142,1 & 281,3 & 18,9 \\
+                E-05 & 6,35 & 31,67 & 100,5 & 143,0 & 282,2 & 18,2 \\
+                \bottomrule
+                \multicolumn{7}{l}{\small
+                    $d_0$ : diamètre initial, $A_0$ : aire de la section,
+                    $F_e$ : charge limite élastique, $F_r$ : charge à la rupture.}\\
+            \end{tabular}
+        \end{center}
+    \end{table}
+\end{landscape}
+
+\section{Références croisées (\texttt{cleveref})}
+
+Récapitulatif de tous les types de renvois supportés par la configuration
+française de la classe :
+
+\begin{itemize}[itemsep=3pt]
+    \item \textbf{Équation unique :}
+          \cref{eq:couple} — \Cref{eq:ecinrot}
+    \item \textbf{Équations multiples (liste) :}
+          \cref{eq:newton_x,eq:newton_y,eq:newton_M}
+    \item \textbf{Figure et sous-figure :}
+          \cref{fig:tikz} — \cref{fig:logo_orig}
+    \item \textbf{Tableau :}
+          \cref{tab:mesures} — \Cref{tab:materiaux}
+    \item \textbf{Section :}
+          \cref{sec:maths} — \Cref{sec:mesures}
+    \item \textbf{Annexe :}
+          \cref{ann:derivation} — \Cref{ann:code}
+\end{itemize}
+
+Note : \texttt{\textbackslash cref} produit une minuscule (contexte
+courant) et \texttt{\textbackslash Cref} une majuscule (début de phrase).
+
+\section{Conclusion}
+
+Ce gabarit a démontré les fonctionnalités suivantes de \texttt{poly.cls} :
+
+\begin{enumerate}[label=\arabic*., noitemsep]
+    \item Page titre (\texttt{\textbackslash addmember}, \texttt{\textbackslash professor}, etc.)
+    \item Nomenclature (\texttt{nomencl})
+    \item Hiérarchie de titres colorés (\texttt{titlesec})
+    \item Listes personnalisées (\texttt{enumitem}), ordinal (\texttt{nth}), tabulation (\texttt{tabto})
+    \item Mathématiques : \texttt{amsmath}, \texttt{bm}, \texttt{cancel}, \texttt{nicematrix}
+    \item Unités SI (\texttt{siunitx}) avec virgule décimale française
+    \item Chimie (\texttt{mhchem})
+    \item Figures, sous-figures (\texttt{subcaption}), \texttt{adjustbox}
+    \item Diagrammes TikZ et graphiques pgfplots avec les couleurs de la classe
+    \item Tableaux \texttt{booktabs}, \texttt{tabularx}, \texttt{xcolor}
+    \item Colonnes multiples (\texttt{multicol})
+    \item Notes (\texttt{todonotes}) et page paysage (\texttt{pdflscape})
+    \item Références croisées bilingues (\texttt{cleveref})
+    \item Bibliographie IEEE (\texttt{biblatex}/\texttt{biber}) \cite{intdesign20discoverability}
+    \item Annexes avec \texttt{cleveref} configuré pour ``annexe''
+\end{enumerate}
+
+\newpage
+\printbibliography
+
+\newpage
+\appendix
+
+\section{Dérivation de l'énergie cinétique}\label{ann:derivation}
+
+La dérivation complète de l'\cref{eq:ecinrot} à partir du principe
+fondamental de la dynamique des solides rigides.
+
+Pour un corps en rotation pure autour d'un axe fixe $O$ :
+\begin{align}
+    T &= \int_{\mathcal{B}} \frac{1}{2}\, v^2 \, \mathrm{d}m
+      = \int_{\mathcal{B}} \frac{1}{2} (\omega r)^2 \, \mathrm{d}m
+      = \frac{\omega^2}{2}
+        \underbrace{\int_{\mathcal{B}} r^2 \, \mathrm{d}m}_{J_O}
+      = \frac{1}{2} J_O \omega^2 \notag
+\end{align}
+ce qui redonne bien l'\cref{eq:ecinrot}.
+
+\section{Extraits de code Python}\label{ann:code}
+
+
+La police \texttt{Inconsolata} chargée par la classe est utilisée
+automatiquement par \texttt{listings}. Code inline :
+\lstinline[language=Python]|np.linspace(0, 1, 100)|.
+ 
+Le \cref{lst:signal} montre un filtre de Butterworth implémenté en Python.
+ 
+\begin{lstlisting}[language=Python,
+                   caption={Filtre passe-bas de Butterworth},
+                   label={lst:signal}]
+import numpy as np
+from scipy.signal import butter, filtfilt
+ 
+def filtre_passe_bas(signal, fc, fs, ordre=4):
+    """Filtre de Butterworth passe-bas.
+ 
+    Args:
+        signal : tableau numpy du signal brut
+        fc     : frequence de coupure (Hz)
+        fs     : frequence d'echantillonnage (Hz)
+        ordre  : ordre du filtre (defaut : 4)
+    """
+    b, a = butter(ordre, fc / (fs / 2), btype='low')
+    return filtfilt(b, a, signal)
+ 
+# Exemple d'utilisation
+fs, fc = 1000, 50          # Hz
+t = np.linspace(0, 1, fs)
+signal_brut = np.sin(2 * np.pi * 10 * t) + 0.5 * np.random.randn(fs)
+signal_filtre = filtre_passe_bas(signal_brut, fc, fs)
+\end{lstlisting}
+ 
+% Pour insérer du code depuis un fichier externe (utile en annexe) :
+% \lstinputlisting[language=Python, caption={Script d'analyse}]{code/analyse.py}
+
+\end{document}

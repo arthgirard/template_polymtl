@@ -1,0 +1,34 @@
+\babel@toc {french}{}\relax 
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
+\contentsline {section}{\numberline {2}Typographie et mise en forme}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Hiérarchie des titres colorés}{1}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Troisième niveau}{1}{subsubsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.2}Listes personnalisées (\texttt {enumitem})}{1}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Ordinal (\texttt {nth}) et tabulation (\texttt {tabto})}{1}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Mathématiques}{2}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Équations numérotées et alignées}{2}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Vecteurs gras (\texttt {bm})}{2}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Annulations (\texttt {cancel})}{2}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Matrices (\texttt {nicematrix})}{2}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Unités et grandeurs (\texttt {siunitx})}{2}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Grandeurs avec incertitude}{2}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Plages et listes d'unités}{2}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Nombres et notation scientifique}{3}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Tableau avec colonne \texttt {S} de \texttt {siunitx}}{3}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Chimie (\texttt {mhchem})}{3}{section.5}%
+\contentsline {section}{\numberline {6}Figures et sous-figures}{3}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Figure simple}{3}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Sous-figures (\texttt {subcaption})}{3}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Diagramme TikZ}{4}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Graphique pgfplots}{4}{subsection.6.4}%
+\contentsline {section}{\numberline {7}Tableaux avancés}{4}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Tableau coloré (\texttt {xcolor})}{5}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Tableau à largeur fixe (\texttt {tabularx})}{5}{subsection.7.2}%
+\contentsline {section}{\numberline {8}Mise en page avancée}{5}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Colonnes multiples (\texttt {multicol})}{5}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Notes de travail (\texttt {todonotes})}{5}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Page en mode paysage (\texttt {pdflscape})}{5}{subsection.8.3}%
+\contentsline {section}{\numberline {9}Références croisées (\texttt {cleveref})}{7}{section.9}%
+\contentsline {section}{\numberline {10}Conclusion}{7}{section.10}%
+\contentsline {section}{\numberline {A}Dérivation de l'énergie cinétique}{9}{appendix.A}%
+\contentsline {section}{\numberline {B}Extraits de code Python}{9}{appendix.B}%
