@@ -1,6 +1,6 @@
 # Gabarit LaTeX pour Polytechnique Montréal
 
-Classe de document optimisée pour la rédaction de rapports techniques, projets de conception et travaux pratiques selon les exigences de l'établissement.
+Classe de document optimisée pour la rédaction de rapports techniques, projets de conception et travaux pratiques selon les exigences de Polytechnique Montréal.
 
 ---
 
