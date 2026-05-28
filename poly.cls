@@ -131,7 +131,7 @@
 }
 
 % Code
-\usepackage{listings}
+\RequirePackage{listings}
 
 \lstdefinestyle{poly}{
     basicstyle = \ttfamily\small,
