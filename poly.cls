@@ -71,6 +71,7 @@
 \RequirePackage{subcaption}
 \RequirePackage{float}
 \RequirePackage{tikz,tikz-3dplot}
+\usetikzlibrary{patterns}
 \RequirePackage{pgfplots}
 \pgfplotsset{compat=1.18}
 \RequirePackage{pdfpages}
