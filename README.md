@@ -1,22 +1,11 @@
-<div align="center">
-  <img src="figures/poly-logo.png" width="280px" alt="Polytechnique Montréal"/>
-  <h1>Gabarit LaTeX — Polytechnique Montréal</h1>
+<img src="figures/poly-logo.png" height="50px" align="left" alt="Polytechnique Montréal"/>
+# Gabarit LaTeX — Polytechnique Montréal
  
-  <p>Classe LaTeX clé-en-main pour rédiger des rapports techniques conformes aux normes<br>graphiques de Polytechnique Montréal.</p>
-  <a href="https://github.com/arthgirard/polymtl_latex/actions/workflows/compile.yml">
-    <img src="https://github.com/arthgirard/polymtl_latex/actions/workflows/compile.yml/badge.svg" alt="Compile LaTeX"/>
-  </a>
-  <a href="LICENSE">
-    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"/>
-  </a>
-  <br><br>
+Classe LaTeX clé-en-main pour rédiger des rapports techniques conformes aux normes graphiques de Polytechnique Montréal.
  
-  <a href="https://github.com/arthgirard/polymtl_latex/releases/download/latest/template.pdf">Documentation/Démo (PDF)</a>
-  &nbsp;·&nbsp;
-  <a href="https://github.com/new?template_name=polymtl_latex&template_owner=arthgirard">Utiliser le template</a>
- 
-</div>
-
+[![Compile LaTeX](https://github.com/arthgirard/polymtl_latex/actions/workflows/compile.yml/badge.svg)](https://github.com/arthgirard/polymtl_latex/actions/workflows/compile.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![PDF](https://img.shields.io/badge/template-PDF-red.svg)](https://github.com/arthgirard/polymtl_latex/releases/download/latest/template.pdf)
 
 ---
 
