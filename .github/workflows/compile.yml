@@ -4,8 +4,6 @@ on:
   push:
     branches: [master]
   pull_request:
-  release:
-    types: [created]
 
 jobs:
   build:
@@ -22,8 +20,11 @@ jobs:
           name: template-poly
           path: template.pdf
 
-      - name: Upload PDF to release
-        if: github.event_name == 'release'
+      - name: Upload PDF to latest release
+        if: github.ref == 'refs/heads/master'
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: latest
+          name: Latest Build
+          prerelease: true
           files: template.pdf
